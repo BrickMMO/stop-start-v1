@@ -17,7 +17,7 @@ This application will intentionally be written in a simplified structure with a 
 
 ## Repo Resources
 
-- [Stop Start]([https://flow.brickmmo.com](https://pages.codeadam.ca/stopstart))
+- [Stop Start]([https://flow.brickmmo.com](https://pages.codeadam.ca/stopstart)
 - [PHP](https://php.net)
 - [CodeAdam](https://codeadam.ca)
 
