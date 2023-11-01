@@ -11,7 +11,7 @@ A basic stop, start, continue survey tool
 
 This application will intentionally be written in a simplified structure with a simple stack. This will provide students with a simple server-side database application to use as a demo in class.
 
-<img src="https://console.codeadam.ca/api/image/php" width="60"> <img src="https://console.codeadam.ca/api/image/mysql" width="60">
+<img src="https://console.codeadam.ca/api/image/php" width="60"> <img src="https://console.codeadam.ca/api/image/mysql" width="60"> <img src="https://console.codeadam.ca/api/image/w3css" width="60">
 
 ---
 
