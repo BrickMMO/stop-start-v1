@@ -24,38 +24,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- Table structure for table `admins`
 --
 
-CREATE TABLE `feedback` (
+CREATE TABLE `admins` (
   `id` int(11) NOT NULL,
-  `class_id` int(11) NOT NULL,
-  `stop` varchar(255) NOT NULL,
-  `start` varchar(255) NOT NULL,
-  `continue` varchar(255) NOT NULL,
+  `first` varchar(255) DEFAULT NULL,
+  `last` varchar(255) DEFAULT NULL,
+  `github` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `upated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `first`, `last`, `github`, `email`, `password`, `status`, `created_at`, `upated_at`) VALUES
+(1, 'Adam', 'Thomas', 'codeadamca', 'admin@email.com', '5f4dcc3b5aa765d61d8327deb882cf99', 'active', '2023-07-30 20:07:45', '2023-11-17 18:21:28');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `feedback`
+-- Indexes for table `admins`
 --
-ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `feedback`
+-- AUTO_INCREMENT for table `admins`
 --
-ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
