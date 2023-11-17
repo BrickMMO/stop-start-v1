@@ -15,17 +15,22 @@ include('includes/functions.php');
 
     <title>Home | Stop, Start, Continue</title>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
 
-    <div class="w3-container w3-section" style="max-width: 800px; margin: auto;">
+    <div class="container" style="max-width: 800px; margin: auto;">
 
-        <div class="w3-container w3-teal">
+        <div class="row headerRow">
 
             <h1>Stop, Start, Continue</h1>
 
+        </div>
+
+        <div class="row">
+            <h2>Classes</h2>
         </div>
 
         <div class="w3-container">
