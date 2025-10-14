@@ -1,6 +1,6 @@
 <?php
 
-print_r($_POST);
+// print_r($_POST);
 
 $connect = mysqli_connect(
     'localhost', // Host
@@ -20,6 +20,9 @@ $query = 'INSERT INTO results (
         "'.$_POST['continue'].'"
     )';
 
-echo $query;
+// echo $query;
 
 mysqli_query($connect, $query);
+
+header('Location: thankyou.html');
+exit();
