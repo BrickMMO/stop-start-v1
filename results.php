@@ -1,16 +1,15 @@
 <?php
 
 $connect = mysqli_connect(
-    'localhost', // Host
-    'root', // Username
-    'root' // Password
+    'sql208.infinityfree.com',
+    'if0_39847005',
+    'JDFe8wafkYR',
+    'if0_39847005_feedback'
 );
 
-mysqli_select_db($connect, 'stop_start_continue');
+// echo "Connecttion error: ".mysqli_connect_error();
 
-$query = 'SELECT *
-    FROM results
-    ORDER BY completed_at DESC';
+$query = 'SELECT * FROM results';
 $result = mysqli_query($connect, $query);
 
 ?>
@@ -25,21 +24,19 @@ $result = mysqli_query($connect, $query);
     
     <h1>Results</h1>
 
-    <?php
+    <?php while($record = mysqli_fetch_assoc($result)): ?>
 
-    while($record = mysqli_fetch_assoc($result))
-    {
+        Stop:
+        <?=$record['stop']?>
+        <br>
+        Start:
+        <?=$record['start']?>
+        <br>
+        Continue:
+        <?=$record['continue']?>
+        <hr>
 
-        echo '<h2>ID: '.$record['id'].'</h2>
-            <p>Stop: '.$record['stop'].'</p>
-            <p>Start: '.$record['start'].'</p>
-            <p>Continue: '.$record['continue'].'</p>
-            <p>Posted: '.$record['completed_at'].'</p>
-            <hr>';
-
-    }
-
-    ?>
+    <?php endwhile; ?>
 
 </body>
 </html>
